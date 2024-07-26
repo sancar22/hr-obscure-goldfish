@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    fetch('https://cuddly-space-couscous-pg46pgj999x374jj-3000.app.github.dev/')
+    .then(res => res.json())
+    .then(data => console.log(data, 'data here'))
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
